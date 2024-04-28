@@ -771,6 +771,7 @@ textarea.w-select {
 }
 
 .w-container {
+	width: 100% !important;
 	max-width: 940px;
 	margin-left: auto;
 	margin-right: auto;
@@ -4607,7 +4608,7 @@ blockquote {
 }
 
 .post-item {
-	width: 50%;
+	width: 60%;
 	margin-right: 1%;
 }
 
