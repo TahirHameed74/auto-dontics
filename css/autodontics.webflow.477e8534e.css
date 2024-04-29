@@ -3316,7 +3316,7 @@ blockquote {
 	letter-spacing: -0.5px;
 	object-fit: fill;
 	flex: none;
-	width: 63%;
+	width: 100%;
 	font-family: Open Sans, sans-serif;
 	font-size: 20px;
 	font-weight: 300;
@@ -3324,6 +3324,76 @@ blockquote {
 	position: relative;
 	bottom: -10px;
 	overflow: visible;
+}
+
+.advantages {
+	display: flex;
+}
+
+.hover-content-1,
+.hover-content-2,
+.hover-content-3 {
+	visibility: hidden; /* Hide but still take up space in the layout */
+	opacity: 0;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	width: 46% !important;
+	transform: translateY(-50%);
+	transition: visibility 0s linear 0.5s, opacity 0.5s linear; /* visibility transitions after opacity */
+}
+
+.hover-target-1,
+.hover-target-2,
+.hover-target-3 {
+	cursor: pointer;
+	position: relative; /* Needed for pseudo-element positioning */
+	display: inline-block; /* To fit the width of the content */
+	text-decoration: none; /* Removing the default underline */
+}
+
+.hover-target-1::before,
+.hover-target-2::before,
+.hover-target-3::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px; /* Adjust as needed */
+	height: 1px; /* Adjust the thickness of the underline */
+	background-color: #ccc; /* Light tone for the default underline color */
+}
+.hover-target-1::after,
+.hover-target-2::after,
+.hover-target-3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 100%; /* Start with the pseudo-element fully to the right */
+	bottom: -2px; /* Adjust the position of the underline */
+	height: 2px; /* Height of the underline */
+	background-color: #000; /* Use the text color for the underline */
+	transition: right 0.5s ease-out; /* Transition effect for the underline */
+}
+
+.hover-target-1:hover::after,
+.hover-target-2:hover::after,
+.hover-target-3:hover::after {
+	right: 0; /* On hover, extend the pseudo-element fully to the left */
+}
+
+.hover-target-2,
+.hover-target-3 {
+	margin-left: 10px;
+}
+
+/* Hover state styles for targets */
+.hover-target-1:hover + .hover-content-1,
+.hover-target-2:hover + .hover-content-2,
+.hover-target-3:hover + .hover-content-3 {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s; /* No delay when starting the transition */
 }
 
 .subheading.white {
