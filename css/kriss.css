@@ -3335,6 +3335,10 @@ blockquote {
 	display: flex;
 }
 
+.advImg {
+	border-radius: 30px;
+}
+
 .hover-content-1,
 .hover-content-2,
 .hover-content-3 {
@@ -3541,6 +3545,7 @@ blockquote {
 }
 
 .intro-guy {
+	border-radius: 30px;
 	min-width: 200px;
 	position: absolute;
 	top: auto;
@@ -4648,19 +4653,19 @@ blockquote {
 }
 
 .hover-insta.insta-3 {
-	background-image: url("../images/65b664340ee72a952f20bfe9_checkers.png");
+	background-image: url("../images/f3.png");
 }
 
 .hover-insta.insta-4 {
-	background-image: url("../images/65b664357966128030a30f5c_rocket.png");
+	background-image: url("../images/f1.png");
 }
 
 .hover-insta.insta {
-	background-image: url("../images/65b66434c78b959ebd138774_implant.png");
+	background-image: url("../images/f4.png");
 }
 
 .hover-insta.insta-2 {
-	background-image: url("../images/65b66434fa89fdf13c32b136_fire.png");
+	background-image: url("../images/f2.png");
 }
 
 .heading-full {
@@ -6664,6 +6669,7 @@ blockquote {
 }
 
 .relative-full-height {
+	width: 100%;
 	height: 100%;
 	display: inline-block;
 	position: relative;
@@ -7326,6 +7332,7 @@ blockquote {
 }
 
 .intro-mobile {
+	border-radius: 30px;
 	min-width: 200px;
 	position: absolute;
 	top: auto;
